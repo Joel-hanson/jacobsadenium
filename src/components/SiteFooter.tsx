@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "@/components/BrandLogo";
 import { site, telHref, whatsappHref } from "@/lib/site";
 
 export function SiteFooter() {
@@ -6,16 +7,8 @@ export function SiteFooter() {
     <footer className="mt-auto bg-forest-deep text-foam">
       <div className="mx-auto grid max-w-6xl gap-12 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <div className="flex items-center gap-2.5">
-            <span
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-lime/20 text-lime"
-              aria-hidden
-            >
-              ✿
-            </span>
-            <p className="font-display text-2xl font-extrabold tracking-tight">
-              {site.name}
-            </p>
+          <div className="inline-flex rounded-2xl bg-foam px-3 py-2.5 shadow-sm">
+            <BrandLogo variant="footer" />
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-foam/65">
             Adenium nursery in Manalur, Thrissur. Call or WhatsApp to check what’s

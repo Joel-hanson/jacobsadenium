@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { site, whatsappHref } from "@/lib/site";
+import { BrandLogo } from "@/components/BrandLogo";
+import { whatsappHref } from "@/lib/site";
 
 const links = [
   { href: "/", label: "Home" },
@@ -17,17 +18,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-line/70 bg-mint/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
-        <Link href="/" className="flex min-w-0 items-center gap-2">
-          <span
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-forest text-base text-lime"
-            aria-hidden
-          >
-            ✿
-          </span>
-          <span className="font-display truncate text-base font-extrabold tracking-tight text-forest sm:text-lg">
-            {site.name}
-          </span>
-        </Link>
+        <BrandLogo variant="header" priority className="shrink-0" />
 
         <nav
           className="hidden items-center gap-1 rounded-full border border-line bg-card/80 px-1.5 py-1.5 md:flex"

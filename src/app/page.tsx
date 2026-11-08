@@ -113,6 +113,7 @@ export default function HomePage() {
                     src={asset("/plants/adenium-3d-purple.webp")}
                     alt=""
                     fill
+                    loading="eager"
                     className="object-contain"
                     sizes="64px"
                   />
@@ -128,6 +129,7 @@ export default function HomePage() {
                     src={asset("/plants/adenium-3d-cream.webp")}
                     alt=""
                     fill
+                    loading="eager"
                     className="object-contain"
                     sizes="64px"
                   />
@@ -147,6 +149,7 @@ export default function HomePage() {
                       src={asset(c.src)}
                       alt={c.name}
                       fill
+                      loading="eager"
                       className="object-contain p-1"
                       sizes="56px"
                     />
