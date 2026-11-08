@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Snake plant placeholder">
+  <rect width="800" height="600" fill="#ebeee8"/>
+  <ellipse cx="400" cy="480" rx="90" ry="24" fill="#8b5a3c"/>
+  <path d="M360 480v-260c0-20 10-30 20-30s20 10 20 30v260" fill="#2a5c3d"/>
+  <path d="M400 480v-300c0-22 12-34 24-34s22 12 22 34v300" fill="#3a7a52"/>
+  <path d="M320 480v-200c0-18 10-28 20-28s18 10 18 28v200" fill="#4f9163"/>
+  <path d="M460 480v-220c0-18 10-28 18-28s18 10 18 28v220" fill="#1f4630"/>
+</svg>

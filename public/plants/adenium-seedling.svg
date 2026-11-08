@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Adenium seedlings placeholder">
+  <rect width="800" height="600" fill="#e7f0e8"/>
+  <rect x="180" y="360" width="120" height="90" rx="8" fill="#c4784a"/>
+  <rect x="340" y="360" width="120" height="90" rx="8" fill="#b86a3e"/>
+  <rect x="500" y="360" width="120" height="90" rx="8" fill="#c4784a"/>
+  <path d="M240 360v-70" stroke="#2a5c3d" stroke-width="10" stroke-linecap="round"/>
+  <path d="M400 360v-90" stroke="#2a5c3d" stroke-width="10" stroke-linecap="round"/>
+  <path d="M560 360v-60" stroke="#2a5c3d" stroke-width="10" stroke-linecap="round"/>
+  <ellipse cx="230" cy="275" rx="22" ry="12" fill="#3a7a52"/>
+  <ellipse cx="255" cy="280" rx="18" ry="10" fill="#2a5c3d"/>
+  <ellipse cx="388" cy="250" rx="24" ry="12" fill="#3a7a52"/>
+  <ellipse cx="415" cy="255" rx="20" ry="11" fill="#2a5c3d"/>
+  <ellipse cx="548" cy="285" rx="20" ry="11" fill="#3a7a52"/>
+</svg>

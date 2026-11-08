@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Red Adenium placeholder">
+  <rect width="800" height="600" fill="#e8efe8"/>
+  <ellipse cx="400" cy="490" rx="150" ry="36" fill="#5c3a28" opacity=".2"/>
+  <path d="M355 470c12-100 28-185 48-250 12 60 30 140 50 250" fill="#1f4630"/>
+  <ellipse cx="402" cy="460" rx="60" ry="48" fill="#2a5c3d"/>
+  <circle cx="365" cy="190" r="30" fill="#b8323a"/>
+  <circle cx="410" cy="175" r="34" fill="#c9444c"/>
+  <circle cx="450" cy="205" r="28" fill="#a02830"/>
+  <circle cx="408" cy="208" r="12" fill="#fff1e4"/>
+</svg>

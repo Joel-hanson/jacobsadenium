@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jacobs Adenium
 
-## Getting Started
+Marketing site for a family Adenium nursery in Manalur, Thrissur. Browse plants, read grow guides, call or visit — payments can be added later.
 
-First, run the development server:
+**Live:** [jacobs-adenium.joelhanson.com](https://jacobs-adenium.joelhanson.com/) · **GitHub Pages** after DNS CNAME is set
+
+## Quick start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy (GitHub Pages)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Pushes to `main` build a static export and deploy via [`.github/workflows/pages.yml`](.github/workflows/pages.yml).
 
-## Learn More
+One-time setup:
 
-To learn more about Next.js, take a look at the following resources:
+1. Repo **Settings → Pages → Source: GitHub Actions**
+2. DNS CNAME: `jacobs-adenium` → `Joel-hanson.github.io` (Cloudflare: DNS only)
+3. Pages → Custom domain: `jacobs-adenium.joelhanson.com` (Enforce HTTPS)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Before go-live
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Edit [`src/lib/site.ts`](src/lib/site.ts):
 
-## Deploy on Vercel
+1. Set `phoneDisplay`, `phoneE164`, and `whatsappE164` to the real nursery number  
+   (example: `phoneDisplay: "+91 98765 43210"`, `phoneE164: "919876543210"`).
+2. Location and Maps links are already set to Karamuck, Manalur, Thrissur.
+3. Adjust `hours` if needed.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Edit plants
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Plant list: [`src/lib/plants.ts`](src/lib/plants.ts). Add photos under `public/plants/`.
+
+## Design notes
+
+Visual direction inspired by modern plant-nursery landing pages (Behance / Uplabs style): full-bleed bloom photography, deep canopy greens, Adenium pink accents, editorial plant grid, phone-first CTAs.
+
+## Later (not in this build)
+
+- UPI / Google Pay QR
+- Cashfree payment links
+- Full cart checkout
+- Instagram / YouTube weekly shorts embedding

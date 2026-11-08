@@ -1,0 +1,67 @@
+# Deploy static Next export to GitHub Pages → https://jacobs-adenium.joelhanson.com
+#
+# Pages source MUST be "GitHub Actions" (not "Deploy from a branch").
+#
+# One-time (human):
+#   1. Settings → Pages → Source: GitHub Actions
+#   2. DNS CNAME: jacobs-adenium → Joel-hanson.github.io (Cloudflare: DNS only)
+#   3. Pages → Custom domain: jacobs-adenium.joelhanson.com (Enforce HTTPS)
+#
+# Repo must be public (or GitHub Pro) for Pages on the free plan.
+
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build static export
+        run: npm run build
+
+      - name: Ensure Pages skips Jekyll
+        run: touch out/.nojekyll
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

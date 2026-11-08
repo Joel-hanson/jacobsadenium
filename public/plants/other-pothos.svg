@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Pothos placeholder">
+  <rect width="800" height="600" fill="#e8efe6"/>
+  <rect x="360" y="380" width="80" height="100" rx="6" fill="#c4784a"/>
+  <path d="M400 380c-20-60-70-90-120-100" stroke="#2a5c3d" stroke-width="8" fill="none"/>
+  <path d="M400 360c30-50 90-70 140-60" stroke="#2a5c3d" stroke-width="8" fill="none"/>
+  <ellipse cx="270" cy="270" rx="45" ry="28" transform="rotate(-30 270 270)" fill="#3a7a52"/>
+  <ellipse cx="545" cy="280" rx="48" ry="30" transform="rotate(25 545 280)" fill="#4f9163"/>
+  <ellipse cx="340" cy="320" rx="40" ry="24" transform="rotate(-15 340 320)" fill="#2a5c3d"/>
+</svg>

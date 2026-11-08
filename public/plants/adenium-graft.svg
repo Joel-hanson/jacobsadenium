@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Grafted Adenium placeholder">
+  <rect width="800" height="600" fill="#f0ebe3"/>
+  <ellipse cx="400" cy="495" rx="155" ry="34" fill="#5c3a28" opacity=".22"/>
+  <path d="M380 470c5-110 8-200 15-270" stroke="#2a5c3d" stroke-width="28" fill="none" stroke-linecap="round"/>
+  <path d="M395 280c40-40 70-50 100-45" stroke="#2a5c3d" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M395 300c-45-35-80-40-110-30" stroke="#2a5c3d" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <ellipse cx="400" cy="465" rx="58" ry="44" fill="#3a7a52"/>
+  <circle cx="300" cy="250" r="22" fill="#e8a0b8"/>
+  <circle cx="500" cy="230" r="24" fill="#c9444c"/>
+  <circle cx="420" cy="180" r="22" fill="#f0c25a"/>
+</svg>
