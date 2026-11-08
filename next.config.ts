@@ -1,11 +1,15 @@
 import type { NextConfig } from "next";
 
+const basePath = "/jacobsadenium";
+
 const nextConfig: NextConfig = {
   // GitHub project Pages under joelhanson.com/jacobsadenium/
-  // (user site joel-hanson.github.io already uses joelhanson.com)
   output: "export",
-  basePath: "/jacobsadenium",
+  basePath,
   trailingSlash: true,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   // Required for static export — no image optimization server on Pages
   images: { unoptimized: true },
   turbopack: {

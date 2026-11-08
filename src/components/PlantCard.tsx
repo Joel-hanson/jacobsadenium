@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { isProductCutout, type Plant } from "@/lib/plants";
 import { whatsappHref } from "@/lib/site";
 
@@ -30,7 +31,7 @@ export function PlantCard({
         } ${cutout ? "bg-mint-deep/60" : ""}`}
       >
         <Image
-          src={plant.image}
+          src={asset(plant.image)}
           alt={plant.name}
           fill
           className={`plant-media ${

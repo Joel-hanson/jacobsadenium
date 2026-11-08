@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { adeniumColors, adeniumIntro } from "@/lib/adenium";
+import { asset } from "@/lib/asset";
 import { guides } from "@/lib/guides";
 import { adeniums, isProductCutout } from "@/lib/plants";
 import { site, telHref, whatsappHref } from "@/lib/site";
@@ -95,7 +96,7 @@ export default function HomePage() {
             <div className="animate-fade relative mx-auto flex min-h-[22rem] w-full max-w-lg items-center justify-center sm:min-h-[26rem] lg:max-w-none">
               <div className="hero-orb relative z-10 aspect-square w-[78%] max-w-[22rem] overflow-hidden rounded-full border-[6px] border-lime/45 bg-forest-deep/40 sm:w-[85%] sm:max-w-[26rem]">
                 <Image
-                  src="/plants/adenium-3d-fuchsia.webp"
+                  src={asset("/plants/adenium-3d-fuchsia.webp")}
                   alt="Fuchsia pink Adenium"
                   fill
                   preload
@@ -109,7 +110,7 @@ export default function HomePage() {
               <div className="float-card absolute left-0 top-[12%] z-20 hidden w-[9.5rem] rounded-2xl border border-white/15 bg-card/95 p-2.5 shadow-lg backdrop-blur-sm sm:block lg:left-2">
                 <div className="relative mx-auto h-16 w-16">
                   <Image
-                    src="/plants/adenium-3d-purple.webp"
+                    src={asset("/plants/adenium-3d-purple.webp")}
                     alt=""
                     fill
                     className="object-contain"
@@ -124,7 +125,7 @@ export default function HomePage() {
               <div className="float-card-delay absolute bottom-[8%] right-0 z-20 hidden w-[9.5rem] rounded-2xl border border-white/15 bg-card/95 p-2.5 shadow-lg backdrop-blur-sm sm:block lg:right-2">
                 <div className="relative mx-auto h-16 w-16">
                   <Image
-                    src="/plants/adenium-3d-cream.webp"
+                    src={asset("/plants/adenium-3d-cream.webp")}
                     alt=""
                     fill
                     className="object-contain"
@@ -143,7 +144,7 @@ export default function HomePage() {
                     className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-lime/40 bg-card"
                   >
                     <Image
-                      src={c.src}
+                      src={asset(c.src)}
                       alt={c.name}
                       fill
                       className="object-contain p-1"
@@ -166,7 +167,7 @@ export default function HomePage() {
               >
                 <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-[1rem] bg-mint-deep/50 sm:mx-auto sm:h-28 sm:w-full sm:max-w-[8.5rem]">
                   <Image
-                    src={item.src}
+                    src={asset(item.src)}
                     alt={item.name}
                     fill
                     className="object-contain p-1.5"
@@ -249,7 +250,7 @@ export default function HomePage() {
                     }`}
                   >
                     <Image
-                      src={color.image}
+                      src={asset(color.image)}
                       alt={color.name}
                       fill
                       className={
@@ -308,7 +309,7 @@ export default function HomePage() {
                 className="relative aspect-square overflow-hidden rounded-[1.5rem] bg-mint-deep/70 sm:rounded-[1.75rem]"
               >
                 <Image
-                  src={src}
+                  src={asset(src)}
                   alt="Adenium colour variety"
                   fill
                   className="object-contain p-3"
@@ -328,7 +329,7 @@ export default function HomePage() {
                   }`}
                 >
                   <Image
-                    src={plant.image}
+                    src={asset(plant.image)}
                     alt={plant.name}
                     fill
                     className={
@@ -393,7 +394,7 @@ export default function HomePage() {
                   } ${cutout ? "bg-mint-deep/50" : ""}`}
                 >
                   <Image
-                    src={plant.image}
+                    src={asset(plant.image)}
                     alt={plant.name}
                     fill
                     className={`plant-media ${
