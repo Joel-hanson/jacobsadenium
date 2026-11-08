@@ -1,13 +1,9 @@
-# Deploy static Next export to GitHub Pages → https://jacobs-adenium.joelhanson.com
+# Deploy static Next export → https://joelhanson.com/jacobsadenium/
+#
+# Relies on the user site custom domain (joelhanson.com → joel-hanson.github.io).
+# Repo name must stay jacobsadenium so the Pages path matches basePath.
 #
 # Pages source MUST be "GitHub Actions" (not "Deploy from a branch").
-#
-# One-time (human):
-#   1. Settings → Pages → Source: GitHub Actions
-#   2. DNS CNAME: jacobs-adenium → Joel-hanson.github.io (Cloudflare: DNS only)
-#   3. Pages → Custom domain: jacobs-adenium.joelhanson.com (Enforce HTTPS)
-#
-# Repo must be public (or GitHub Pro) for Pages on the free plan.
 
 name: Deploy site
 

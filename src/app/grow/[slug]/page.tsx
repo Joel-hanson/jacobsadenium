@@ -50,7 +50,7 @@ export default async function GuidePage({ params }: Props) {
             <h2 className="font-display text-2xl text-forest sm:text-3xl">
               {section.heading}
             </h2>
-            <div className="mt-4 space-y-3 text-[1.05rem] font-light leading-relaxed text-ink/90">
+            <div className="mt-4 space-y-3 text-[1.05rem] leading-relaxed text-ink/90">
               {section.body.map((paragraph) => (
                 <p key={paragraph.slice(0, 40)}>{paragraph}</p>
               ))}

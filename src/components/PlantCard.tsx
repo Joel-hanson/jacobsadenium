@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { Plant } from "@/lib/plants";
+import { isProductCutout, type Plant } from "@/lib/plants";
 import { whatsappHref } from "@/lib/site";
 
 export function PlantCard({
@@ -16,6 +16,7 @@ export function PlantCard({
     lime: "bg-lime-soft",
     forest: "bg-forest text-foam",
   };
+  const cutout = isProductCutout(plant.image);
 
   return (
     <article
@@ -26,16 +27,14 @@ export function PlantCard({
       <div
         className={`relative overflow-hidden ${
           featured ? "aspect-[16/10] sm:aspect-[16/9]" : "aspect-[4/5]"
-        } ${plant.image.endsWith(".png") ? "bg-mint-deep/60" : ""}`}
+        } ${cutout ? "bg-mint-deep/60" : ""}`}
       >
         <Image
           src={plant.image}
           alt={plant.name}
           fill
           className={`plant-media ${
-            plant.image.endsWith(".png")
-              ? "object-contain p-4 sm:p-6"
-              : "object-cover"
+            cutout ? "object-contain p-4 sm:p-6" : "object-cover"
           }`}
           sizes={featured ? "(max-width: 768px) 100vw, 66vw" : "(max-width: 768px) 100vw, 33vw"}
         />

@@ -12,9 +12,9 @@ export default function HomePage() {
 
   const heroColors = [
     {
-      src: "/plants/adenium-3d.webp",
-      name: "Classic Pink",
-      note: "Signature pink blooms",
+      src: "/plants/adenium-3d-fuchsia.webp",
+      name: "Fuchsia Pink",
+      note: "Hot pink to cream centre",
     },
     {
       src: "/plants/adenium-3d-purple.webp",
@@ -95,10 +95,11 @@ export default function HomePage() {
             <div className="animate-fade relative mx-auto flex min-h-[22rem] w-full max-w-lg items-center justify-center sm:min-h-[26rem] lg:max-w-none">
               <div className="hero-orb relative z-10 aspect-square w-[78%] max-w-[22rem] overflow-hidden rounded-full border-[6px] border-lime/45 bg-forest-deep/40 sm:w-[85%] sm:max-w-[26rem]">
                 <Image
-                  src="/plants/adenium-3d.webp"
-                  alt="Classic pink Adenium"
+                  src="/plants/adenium-3d-fuchsia.webp"
+                  alt="Fuchsia pink Adenium"
                   fill
-                  priority
+                  preload
+                  quality={75}
                   className="object-contain p-4 sm:p-6"
                   sizes="(max-width: 768px) 70vw, 420px"
                 />
@@ -297,7 +298,7 @@ export default function HomePage() {
         <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="grid grid-cols-2 gap-3">
             {[
-              "/plants/adenium-3d.webp",
+              "/plants/adenium-3d-fuchsia.webp",
               "/plants/adenium-3d-purple.webp",
               "/plants/adenium-3d-coral.webp",
               "/plants/adenium-3d-cream.webp",
@@ -378,7 +379,7 @@ export default function HomePage() {
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {finest.map((plant, index) => {
-              const isPng = plant.image.endsWith(".png");
+              const cutout = isProductCutout(plant.image);
               return (
               <article
                 key={plant.id}
@@ -389,14 +390,14 @@ export default function HomePage() {
                 <div
                   className={`relative ${
                     index === 0 ? "aspect-[4/3] sm:aspect-auto sm:h-full sm:min-h-[26rem]" : "aspect-[3/4]"
-                  }`}
+                  } ${cutout ? "bg-mint-deep/50" : ""}`}
                 >
                   <Image
                     src={plant.image}
                     alt={plant.name}
                     fill
                     className={`plant-media ${
-                      isPng ? "object-contain p-5 sm:p-8" : "object-cover"
+                      cutout ? "object-contain p-5 sm:p-8" : "object-cover"
                     }`}
                     sizes={index === 0 ? "(max-width: 640px) 100vw, 50vw" : "25vw"}
                   />

@@ -23,6 +23,13 @@ export type AdeniumColor = {
 
 export const adeniumColors: AdeniumColor[] = [
   {
+    id: "fuchsia",
+    name: "Fuchsia Pink",
+    description: "Hot pink edges with a creamy yellow centre — bold and bright.",
+    swatch: "#e84393",
+    image: "/plants/adenium-3d-fuchsia.webp",
+  },
+  {
     id: "pink",
     name: "Classic Pink",
     description: "Bright pink blooms — our most loved starter colour.",
@@ -49,13 +56,6 @@ export const adeniumColors: AdeniumColor[] = [
     description: "Cream-white petals with a golden yellow throat.",
     swatch: "#f5ecd0",
     image: "/plants/adenium-3d-cream.webp",
-  },
-  {
-    id: "pink-cream",
-    name: "Pink & Cream",
-    description: "Soft pink rim with a creamy centre — elegant in morning light.",
-    swatch: "#f2a0b8",
-    image: "/plants/color-pink-white.webp",
   },
   {
     id: "deep-pink",

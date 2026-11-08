@@ -2,7 +2,7 @@
 
 Marketing site for a family Adenium nursery in Manalur, Thrissur. Browse plants, read grow guides, call or visit — payments can be added later.
 
-**Live:** [jacobs-adenium.joelhanson.com](https://jacobs-adenium.joelhanson.com/) · **GitHub Pages** after DNS CNAME is set
+**Live:** [joelhanson.com/jacobsadenium](https://joelhanson.com/jacobsadenium/)
 
 ## Quick start
 
@@ -11,17 +11,11 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000/jacobsadenium](http://localhost:3000/jacobsadenium).
 
 ## Deploy (GitHub Pages)
 
-Pushes to `main` build a static export and deploy via [`.github/workflows/pages.yml`](.github/workflows/pages.yml).
-
-One-time setup:
-
-1. Repo **Settings → Pages → Source: GitHub Actions**
-2. DNS CNAME: `jacobs-adenium` → `Joel-hanson.github.io` (Cloudflare: DNS only)
-3. Pages → Custom domain: `jacobs-adenium.joelhanson.com` (Enforce HTTPS)
+Pushes to `main` build a static export and deploy via [`.github/workflows/pages.yml`](.github/workflows/pages.yml) to `https://joelhanson.com/jacobsadenium/` (via your existing `joelhanson.com` → `joel-hanson.github.io` domain).
 
 ## Before go-live
 
